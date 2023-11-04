@@ -9,7 +9,7 @@ services:
     ports:
       - "8079:80"
     volumes:
-      - ./:/var/www/html
+      - ./apps:/var/www/html
     environment:
       - APACHE_RUN_USER=www-data
 
