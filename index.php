@@ -25,6 +25,8 @@
   $username = "root";
   $password = "yirjohn@123";
   $database = "mysql_dev";
+  
+  $docker_attachment_location_endpoint="";
 
   $connection = new mysqli($servername, $username, $password, $database);
 
