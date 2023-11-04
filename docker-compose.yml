@@ -11,5 +11,5 @@ services:
       - "8079:80"  # Map host port 8079 to container port 80
     volumes:
       - ./src:/var/www/html  # Mount the local 'src' folder into the container
-    command: ["apache2-foreground"]
+    command: ["/bin/sh", "-c", "docker-php-ext-install mysqli && apache2-foreground"]
 
