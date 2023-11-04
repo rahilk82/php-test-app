@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php:7.4-apache
+    container_name: test-app
+    ports:
+      - "8079:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      - APACHE_RUN_USER=www-data
+
+volumes:
+  php-app:
+    driver: local
